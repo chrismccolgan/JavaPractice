@@ -1,23 +1,3 @@
-package academy.learnprogramming;
-
-public class SpeedConverter {
-  public static long toMilesPerHour(double kilometersPerHour) {
-    if (kilometersPerHour < 0) {
-      return -1;
-    }
-    return Math.round(kilometersPerHour / 1.609);
-  }
-
-  public static void printConversion(double kilometersPerHour) {
-    long converted = toMilesPerHour(kilometersPerHour);
-    if (converted < 0) {
-      System.out.println("Invalid Value");
-    } else {
-      System.out.println(kilometersPerHour + " km/h = " + converted + " mi/h");
-    }
-  }
-}
-
 /*
 1. Write a method called toMilesPerHour that has 1 parameter of type double with the name kilometersPerHour. This
 method needs to return the rounded value of the calculation of type long.
@@ -56,3 +36,23 @@ Examples of input/output:
 
 Use method Math.round to round the number of calculated miles per hour(double). The method round returns long.
 */
+
+package academy.learnprogramming;
+
+public class SpeedConverter {
+  public static long toMilesPerHour(double kilometersPerHour) {
+    if (kilometersPerHour < 0) {
+      return -1;
+    }
+    return Math.round(kilometersPerHour / 1.609);
+  }
+
+  public static void printConversion(double kilometersPerHour) {
+    long converted = toMilesPerHour(kilometersPerHour);
+    if (converted < 0) {
+      System.out.println("Invalid Value");
+    } else {
+      System.out.println(kilometersPerHour + " km/h = " + converted + " mi/h");
+    }
+  }
+}
